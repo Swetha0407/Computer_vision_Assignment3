@@ -1,0 +1,4 @@
+representation,dimensions,bytes_per_vector,bytes_saved,reconstruction_mse,fit_samples
+no_reduction,160,640,0,0.0,150
+PCA_64,64,256,384,8.506719314027578e-05,150
+PCA_32,32,128,512,0.000986697617918253,150

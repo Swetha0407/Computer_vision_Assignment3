@@ -1,0 +1,101 @@
+{
+  "dataset_samples": 30,
+  "dataset_type": "deterministic synthetic",
+  "tasks": {
+    "1": {
+      "samples": 30,
+      "measured_candidates": [
+        "resize_gray",
+        "denoise_normalize",
+        "contour_perspective_rectification"
+      ]
+    },
+    "2": {
+      "samples": 30,
+      "methods": [
+        "point intensity mask",
+        "local inpainting",
+        "global CLAHE"
+      ]
+    },
+    "3": {
+      "samples": 30,
+      "methods": [
+        "binary silhouette",
+        "contour chain outline",
+        "Hu moments"
+      ]
+    },
+    "4": {
+      "samples": 30,
+      "methods": [
+        "Sobel",
+        "LoG",
+        "Canny"
+      ]
+    },
+    "5": {
+      "samples": 30,
+      "methods": [
+        "Harris",
+        "Shi-Tomasi",
+        "FAST"
+      ]
+    },
+    "6": {
+      "samples": 30,
+      "methods": [
+        "standard Hough",
+        "probabilistic Hough",
+        "contour fitLine"
+      ]
+    },
+    "7": {
+      "samples": 30,
+      "methods": [
+        "ORB",
+        "AKAZE",
+        "SIFT"
+      ],
+      "SIFT_available": true
+    },
+    "8": {
+      "samples": 30,
+      "methods": [
+        "nearest neighbour",
+        "Lowe ratio test",
+        "ratio + RANSAC homography"
+      ]
+    },
+    "9": {
+      "samples": 150,
+      "original_dimensions": 160,
+      "components_tested": [
+        32,
+        64
+      ]
+    },
+    "10": {
+      "samples": 30,
+      "methods": [
+        "template geometry",
+        "ORB local features + RANSAC",
+        "three-view synthetic confirmation"
+      ]
+    }
+  },
+  "numerical_answers": {
+    "task1_mm_per_pixel": 0.24,
+    "task2_5x5_filter_sample_visits": 15000000,
+    "task3_circularity": 0.6522337689113757,
+    "task4_gradient_magnitude": 50.0,
+    "task4_gradient_orientation_degrees": 53.13010235415598,
+    "task5_harris_R": 8636.0,
+    "task6_tilt_degrees": 21.80140948635181,
+    "task7_raw_match_proportion": 0.6428571428571429,
+    "task8_ransac_inlier_ratio": 0.6981132075471698,
+    "task9_bytes_saved_per_vector": 512,
+    "task10_acceptance_rate": 0.8
+  },
+  "runtime_note": "Per-method runtimes are measured by perf_counter on this execution environment; expect variation on other hardware."
+}
